@@ -33,6 +33,7 @@ const check = (num) => {
         questions.textContent = randomNum
         arrScores.push(scoreText)
         localStorage.setItem('array', JSON.stringify(arrScores))
+        highestScore.textContent = Math.max(...arrScores)
         guessMessage.textContent = 'Правильно!'
         inputNum.setAttribute('disabled', 'disabled')
     } else {
